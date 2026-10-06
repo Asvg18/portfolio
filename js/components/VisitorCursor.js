@@ -38,6 +38,7 @@ export class VisitorCursor {
     this.#root.addEventListener("pointerleave", () => this.#leave(), options);
     window.addEventListener("blur", () => this.#leave(), options);
     window.addEventListener("scroll", () => this.#schedule(true), options);
+    document.addEventListener("keydown", () => this.#schedule(true), options);
   }
 
   #disable() {
@@ -82,6 +83,9 @@ export class VisitorCursor {
     if (!(target instanceof Element)) return;
     const zone = target.closest(ZONES);
     if (zone) this.#element.dataset.zone = zone.id;
+    const tool = target.closest("[data-cursor]");
+    this.#element.dataset.shape = tool ? tool.dataset.cursor : "arrow";
+    this.#element.style.setProperty("--tool", tool?.dataset.cursorColor ?? "");
     this.#native = !this.#root.classList.contains(ACTIVE_CLASS) || getComputedStyle(target).cursor !== "none";
   }
 

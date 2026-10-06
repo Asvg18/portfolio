@@ -1,4 +1,4 @@
-.about .sec-frame { height: calc(1400 * var(--u)); }
+.about .sec-frame { height: calc(1500 * var(--u)); }
 
 /* Header */
 .about .sec-head { position: absolute; inset: 0 0 auto; height: calc(398 * var(--u)); }
@@ -237,7 +237,7 @@
   left: calc(62 * var(--u));
   top: calc(1027 * var(--u));
   width: calc(1320 * var(--u));
-  height: calc(340 * var(--u));
+  height: calc(440 * var(--u));
 }
 .notes { margin: 0; padding: 0; list-style: none; }
 .note {
@@ -264,6 +264,21 @@
   .note:hover { rotate: 0deg; translate: 0 calc(-6 * var(--u)); z-index: 2; }
   .note:hover .note-paper { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 calc(22 * var(--u)) calc(40 * var(--u)) rgba(0, 0, 0, 0.18); }
 }
+.ab-notes .mk {
+  position: absolute;
+  left: 50%;
+  top: calc(372 * var(--u));
+  translate: -50% 0;
+}
+.ab-notes[data-drawing] .frame-name { color: var(--fig); }
+.ab-notes[data-drawing] .ink { pointer-events: auto; touch-action: none; }
+.ab-notes[data-drawing] .note { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+html:not(.has-vcursor) .ab-notes[data-drawing="marker"] .ink { cursor: crosshair; }
+html:not(.has-vcursor) .ab-notes[data-drawing="eraser"] .ink { cursor: cell; }
+@media (hover: hover) {
+  .ab-notes[data-drawing] .note:hover { rotate: var(--r); translate: none; }
+}
+
 .note-by {
   position: absolute;
   left: calc(23 * var(--n));
@@ -307,7 +322,7 @@
 }
 
 .js .ab-portrait .portrait-fill, .js .ab-portrait .portrait-rim, .js .ab-portrait .portrait-photo img,
-.js .about .frame, .js .ab-notes .frame-name, .js .note-paper { opacity: 0; }
+.js .about .frame, .js .ab-notes .frame-name, .js .note-paper, .js .ab-notes .mk { opacity: 0; }
 
 .about.is-on .ab-portrait .portrait-draw { animation: draw 1.15s both; animation-delay: 0.3s; }
 .about.is-on .ab-portrait .portrait-fill, .about.is-on .ab-portrait .portrait-rim { animation: fill-in 0.5s ease both; animation-delay: 0.92s; }
@@ -356,6 +371,7 @@
 .frame.is-in .tool-row .tags li { animation-delay: calc(var(--d, 0s) + 0.32s + var(--r) * 0.12s + var(--k, 0) * 45ms); }
 
 .ab-notes.is-in .frame-name { animation: fade-up 0.6s var(--ease-out) both; animation-delay: var(--d, 0s); }
+.ab-notes.is-in .mk { animation: fade-up 0.6s var(--ease-out) both; animation-delay: calc(var(--d, 0s) + 0.6s); }
 .ab-notes.is-in .note-paper { animation: note-drop 0.85s var(--ease-spring) both; animation-delay: calc(var(--d, 0s) + 0.12s + var(--k, 0) * 0.1s); }
 @keyframes note-drop {
   from { opacity: 0; translate: 0 calc(-34 * var(--u)); scale: 1.06; rotate: -9deg; }
@@ -391,6 +407,7 @@
   .ab-notes { width: auto; height: auto; margin-top: 44px; }
   .notes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 16px; }
   .note { position: relative; left: auto; top: auto; width: auto; height: auto; aspect-ratio: 1; }
+  .ab-notes .mk { position: relative; left: auto; top: auto; translate: none; margin: 28px auto 0; }
 }
 
 @media (max-width: 699px) {
@@ -415,4 +432,5 @@
   .tool-name { width: auto; font-size: 40px; }
   .ab-notes { margin-top: 36px; }
   .notes { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 14px; }
+  .ab-notes .mk { margin-top: 24px; }
 }

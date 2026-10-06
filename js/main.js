@@ -24,7 +24,7 @@ class Portfolio {
     this.home = new Home(heroElement, { matter: window.Matter });
     this.canvas = new Canvas($("#canvas"), new SectionSwitcher($("#pnRail")));
     this.sections = [
-      new About($("#about"), this.canvas),
+      new About($("#about"), this.canvas, { toast: this.toast }),
       new Projects($("#projects"), this.canvas),
       new Certifications($("#certifications"), this.canvas, certifications),
       new Resume($("#resume")),

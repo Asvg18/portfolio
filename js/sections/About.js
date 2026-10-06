@@ -1,5 +1,6 @@
 import { $ } from "../core/dom.js";
 import { prefersReducedMotion } from "../core/motion.js";
+import { MarkerTool } from "../components/MarkerTool.js";
 
 const COUNT_DURATION = 1100;
 
@@ -10,7 +11,7 @@ export class About {
   #timer = 0;
   #run = 0;
 
-  constructor(section, canvas) {
+  constructor(section, canvas, { toast }) {
     this.#figure = $(".gwa-num", section);
     this.#target = parseFloat(this.#figure.dataset.count);
     this.#decimals = (this.#figure.dataset.count.split(".")[1] || "").length;
@@ -20,6 +21,7 @@ export class About {
     canvas.addEventListener("reset", ({ detail }) => {
       if (detail.section === section) this.#cancel();
     });
+    new MarkerTool($(".ab-notes", section), toast);
   }
 
   #countUp(delay) {

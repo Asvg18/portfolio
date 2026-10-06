@@ -18,6 +18,7 @@ html.has-vcursor dialog { cursor: auto; }
 .visitor-cursor[data-zone="projects"] { --c: #F24E1E; }
 .visitor-cursor[data-zone="certifications"] { --c: #0ACF83; }
 .visitor-cursor[data-zone="resume"] { --c: #A259FF; }
+.visitor-cursor[data-shape="marker"] { --c: var(--tool, #1E1E1E); }
 
 .vc-arrow {
   display: block;
@@ -30,6 +31,35 @@ html.has-vcursor dialog { cursor: auto; }
   transition: transform 0.12s ease, fill 0.3s ease;
 }
 .visitor-cursor.is-pressing .vc-arrow { transform: scale(0.84); }
+
+.vc-pen {
+  position: absolute;
+  left: -2px;
+  top: -22px;
+  display: none;
+  width: 24px;
+  height: 24px;
+  fill: var(--c);
+  stroke: #FFFFFF;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.25));
+}
+.vc-eraser {
+  position: absolute;
+  left: -12px;
+  top: -12px;
+  display: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1.5px #1E1E1E, 0 0 0 1px rgba(255, 255, 255, 0.8);
+  transition: transform 0.12s ease;
+}
+.visitor-cursor.is-pressing .vc-eraser { transform: scale(0.88); }
+.visitor-cursor[data-shape="marker"] .vc-arrow, .visitor-cursor[data-shape="eraser"] .vc-arrow { display: none; }
+.visitor-cursor[data-shape="marker"] .vc-pen, .visitor-cursor[data-shape="eraser"] .vc-eraser { display: block; }
 .vc-tag {
   position: absolute;
   left: 18px;
