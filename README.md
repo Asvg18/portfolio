@@ -20,7 +20,7 @@ assets/
   img/           Portrait, project covers, certificates, project screens
 css/
   base.css       Tokens, reset, tooltips, toast, shared keyframes
-  components/    Marquee, photo pill, theme switch, certificate and screens viewers
+  components/    Marquee, photo pill, theme switch, visitor cursor, certificate and screens viewers
   layout/        Hero (home) and the section canvas
   sections/      About, Projects, Certifications, Resume, Contact
 js/
@@ -29,7 +29,7 @@ js/
   home/          Hero: folders, physics playground, Figma cursor, name typing
   canvas/        Section reveal choreography and the section switcher
   sections/      One class per section
-  components/    Reusable UI: viewers, mail menu, copy button, flashcard, comment pins
+  components/    Reusable UI: viewers, visitor cursor, mail menu, copy button, flashcard, comment pins
   data/          Content: certifications, project screens, skill pills
 ```
 

@@ -6,6 +6,7 @@ import { Toast } from "./core/Toast.js";
 import { Canvas } from "./canvas/Canvas.js";
 import { SectionSwitcher } from "./canvas/SectionSwitcher.js";
 import { ScreensViewer } from "./components/ScreensViewer.js";
+import { VisitorCursor } from "./components/VisitorCursor.js";
 import { certifications } from "./data/certifications.js";
 import { screens } from "./data/screens.js";
 import { Home } from "./home/Home.js";
@@ -32,6 +33,7 @@ class Portfolio {
     const screensDialog = $("#screens");
     this.screens = typeof screensDialog.showModal === "function" ? new ScreensViewer(screensDialog, screens) : null;
     this.marquees = $$("[data-marquee]").map((track) => new Marquee(track));
+    this.visitorCursor = new VisitorCursor($("#visitorCursor"));
     this.offscreenPause = new OffscreenPause([heroElement, $(".tape"), ...this.canvas.sections]);
   }
 
@@ -39,6 +41,7 @@ class Portfolio {
     document.fonts.ready.then(() => this.marquees.forEach((marquee) => marquee.build()));
     this.home.start();
     this.canvas.start();
+    this.visitorCursor.start();
   }
 }
 
