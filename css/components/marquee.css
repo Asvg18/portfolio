@@ -1,0 +1,44 @@
+/* Marquee */
+.marquee {
+  position: relative;
+  z-index: 11;
+  flex: none;
+  height: var(--mq-h);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--mq-bg);
+  color: var(--mq-ink);
+  box-shadow: inset 0 -1px 0 var(--mq-line);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--mq-dur, 40s) linear infinite;
+}
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: max(28px, calc(64 * var(--u)));
+  margin: 0;
+  padding: 0 max(14px, calc(32 * var(--u)));
+  list-style: none;
+  flex: none;
+}
+.marquee-group li {
+  font-family: var(--mono-cond);
+  font-weight: 700;
+  font-size: max(17px, calc(27 * var(--u)));
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-top: 0.08em;
+}
+.marquee-group li.mq-emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: max(18px, calc(30 * var(--u)));
+  letter-spacing: 0;
+  padding-top: 0;
+}
+@keyframes marquee { to { transform: translateX(-50%); } }

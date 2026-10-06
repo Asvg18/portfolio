@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aerron Sander | Portfolio</title>
+<meta name="description" content="Aerron Sander V. Gumarao: designing where people and technology meet. Software engineer and UI/UX designer.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath fill='%230A8DF0' d='M3.2 2.1 23.4 9.6c1 .4 1 1.8 0 2.2l-8.3 3.1c-.3.1-.6.4-.7.7l-3.1 8.3c-.4 1-1.8 1-2.2 0L1.6 3.7c-.3-1 .6-1.9 1.6-1.6Z'/%3E%3C/svg%3E">
+<script>
+(function () {
+  var d = document.documentElement, t = null;
+  d.classList.add("js");
+  try { t = localStorage.getItem("as-theme"); } catch (e) {}
+  if (t === "dark" || t === "light") d.dataset.theme = t;
+  else d.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+})();
+</script>
+<link rel="preload" href="assets/fonts/AlteHaasGrotesk-Bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/AlteHaasGrotesk-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/RelationshipOfMelodrame-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Inter:wght@500&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components/marquee.css">
+<link rel="stylesheet" href="css/components/portrait.css">
+<link rel="stylesheet" href="css/components/theme-switch.css">
+<link rel="stylesheet" href="css/layout/home.css">
+<link rel="stylesheet" href="css/layout/canvas.css">
+<link rel="stylesheet" href="css/sections/about.css">
+<link rel="stylesheet" href="css/sections/projects.css">
+<link rel="stylesheet" href="css/sections/certifications.css">
+<link rel="stylesheet" href="css/sections/resume.css">
+<link rel="stylesheet" href="css/sections/contact.css">
+<link rel="stylesheet" href="css/components/certificate-viewer.css">
+<link rel="stylesheet" href="css/components/screens-viewer.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="py-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient>
+    <linearGradient id="py-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient>
+    <linearGradient id="rimGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/><stop offset="0.28" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+    <linearGradient id="az-a" x1="60.919" y1="9.602" x2="18.667" y2="134.423" gradientUnits="userSpaceOnUse"><stop stop-color="#114A8B"/><stop offset="1" stop-color="#0669BC"/></linearGradient>
+    <linearGradient id="az-c" x1="68.742" y1="5.961" x2="115.122" y2="129.525" gradientUnits="userSpaceOnUse"><stop stop-color="#3CCBF4"/><stop offset="1" stop-color="#2892DF"/></linearGradient>
+  </defs>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v1.8M12 19.4v1.8M4.9 4.9l1.3 1.3M17.8 17.8l1.3 1.3M2.8 12h1.8M19.4 12h1.8M4.9 19.1l1.3-1.3M17.8 6.2l1.3-1.3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 3.5v17M3.5 12h17"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-shots" viewBox="0 0 24 24"><rect x="2.8" y="7.2" width="14.6" height="13" rx="2.6"/><path d="M6.8 3.8h11.2a3 3 0 0 1 3 3v9.4"/><path d="m3 17.2 3.6-3.4a1.5 1.5 0 0 1 2 0l4.3 4.2"/><circle cx="12.9" cy="11.6" r="1.3"/></symbol>
+  <symbol id="i-hash" viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+  <symbol id="i-seal" viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="5.5"/><path d="m8.8 14-1.6 7 4.8-2.6 4.8 2.6-1.6-7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.8 3.6h2.5l1.5 4-2.1 1.5a12 12 0 0 0 6.2 6.2l1.5-2.1 4 1.5v2.5a2 2 0 0 1-2.2 2A16.4 16.4 0 0 1 4.8 5.8a2 2 0 0 1 2-2.2Z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-flip" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.7M20 3.8v4.9h-4.9M20 12a8 8 0 0 1-13.7 5.6L4 15.3M4 20.2v-4.9h4.9"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M21 12v2"/></symbol>
+  <symbol id="b-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="b-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></symbol>
+  <symbol id="b-claude" viewBox="0 0 24 24"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol>
+  <symbol id="b-python" viewBox="0 0 128 128"><path fill="url(#py-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"/><path fill="url(#py-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"/></symbol>
+  <symbol id="b-figma" viewBox="0 0 128 128"><path fill="#0acf83" d="M45.5 129c11.9 0 21.5-9.6 21.5-21.5V86H45.5C33.6 86 24 95.6 24 107.5S33.6 129 45.5 129z"/><path fill="#a259ff" d="M24 64.5C24 52.6 33.6 43 45.5 43H67v43H45.5C33.6 86 24 76.4 24 64.5z"/><path fill="#f24e1e" d="M24 21.5C24 9.6 33.6 0 45.5 0H67v43H45.5C33.6 43 24 33.4 24 21.5z"/><path fill="#ff7262" d="M67 0h21.5C100.4 0 110 9.6 110 21.5S100.4 43 88.5 43H67z"/><path fill="#1abcfe" d="M110 64.5c0 11.9-9.6 21.5-21.5 21.5S67 76.4 67 64.5 76.6 43 88.5 43 110 52.6 110 64.5z"/></symbol>
+  <symbol id="b-azure" viewBox="0 0 128 128"><path d="M46.09.002h40.685L44.541 125.137a6.485 6.485 0 01-6.146 4.413H6.733a6.482 6.482 0 01-5.262-2.699 6.474 6.474 0 01-.876-5.848L39.944 4.414A6.488 6.488 0 0146.09 0z" fill="url(#az-a)" transform="translate(.587 4.468) scale(.91904)"/><path d="M97.28 81.607H37.987a2.743 2.743 0 00-1.874 4.751l38.1 35.562a5.991 5.991 0 004.087 1.61h33.574z" fill="#0078d4"/><path d="M98.055 4.408A6.476 6.476 0 0091.917.002H46.575a6.478 6.478 0 016.137 4.406l39.35 116.594a6.476 6.476 0 01-6.137 8.55h45.344a6.48 6.48 0 006.136-8.55z" fill="url(#az-c)" transform="translate(.587 4.468) scale(.91904)"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 9 12"><path d="M1 11.6V1h6.6v5.2H1"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14.5 4H20v5.5M20 4l-6.5 6.5M9.5 20H4v-5.5M4 20l6.5-6.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M13.5 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8.5Z"/><path d="M13.5 3.5v5h5M9 13h6M9 16.5h4"/></symbol>
+  <symbol id="i-caret" viewBox="0 0 24 24"><path d="m7.5 10 4.5 4.5 4.5-4.5"/></symbol>
+  <symbol id="i-device" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.6"/><path d="M10.5 18.2h3"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5c.6 5.6 4.9 9.9 10.5 10.5-5.6.6-9.9 4.9-10.5 10.5C11.4 16.9 7.1 12.6 1.5 12 7.1 11.4 11.4 7.1 12 1.5Z"/></symbol>
+  <symbol id="b-gmail" viewBox="0 0 24 24"><path fill="#4285F4" d="M1.5 6.6v11.9A1.5 1.5 0 0 0 3 20h3.5v-9.8Z"/><path fill="#34A853" d="M17.5 20H21a1.5 1.5 0 0 0 1.5-1.5V6.6l-5 3.6Z"/><path fill="#EA4335" d="M6.5 10.2 12 14.3l5.5-4.1V5.4L12 9.5 6.5 5.4Z"/><path fill="#FBBC04" d="M17.5 5.4v4.8l5-3.6V5.3c0-1.7-1.9-2.6-3.2-1.6Z"/><path fill="#C5221F" d="M1.5 5.3v1.3l5 3.6V5.4L4.7 3.7c-1.3-1-3.2-.1-3.2 1.6Z"/></symbol>
+  <symbol id="b-outlook" viewBox="0 0 24 24"><rect x="8" y="4.5" width="14.5" height="15" rx="2.2" fill="#28A8EA"/><path d="m9.5 8.6 5.75 4 5.75-4" fill="none" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="1.5" y="6.5" width="11.5" height="11" rx="2.2" fill="#0A64C8"/><ellipse cx="7.25" cy="12" rx="2.55" ry="2.85" fill="none" stroke="#FFFFFF" stroke-width="1.7"/></symbol>
+  <symbol id="fig-arrow" viewBox="0 0 26 26"><path d="M3.2 2.1 23.4 9.6c1 .4 1 1.8 0 2.2l-8.3 3.1c-.3.1-.6.4-.7.7l-3.1 8.3c-.4 1-1.8 1-2.2 0L1.6 3.7c-.3-1 .6-1.9 1.6-1.6Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#folders">Skip to the folders</a>
+
+<main id="main">
+<div class="tg-rail">
+  <button class="tg" type="button" role="switch" aria-checked="false" aria-label="Dark mode" data-theme-toggle data-tip="Switch to dark">
+    <span class="tg-slot tg-slot-sun" aria-hidden="true"><svg class="icon"><use href="#i-sun"/></svg></span>
+    <span class="tg-slot tg-slot-moon" aria-hidden="true"><svg class="icon"><use href="#i-moon"/></svg></span>
+    <span class="tg-knob" aria-hidden="true"><svg class="icon tg-sun"><use href="#i-sun"/></svg><svg class="icon tg-moon"><use href="#i-moon"/></svg></span>
+  </button>
+</div>
+
+<div class="home" id="home">
+
+  <div class="marquee" aria-label="Open a folder, scroll to explore, say hello, click around, readme">
+    <div class="marquee-track" id="marqueeTrack">
+      <ul class="marquee-group" aria-hidden="true">
+        <li>Open a folder</li><li class="mq-emoji">✌️</li>
+        <li>Scroll to explore</li><li class="mq-emoji">🥺</li>
+        <li>Say hello</li><li class="mq-emoji">🍀</li>
+        <li>Click around</li><li class="mq-emoji">📍</li>
+        <li>Readme</li><li class="mq-emoji">✨</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="dots" aria-hidden="true"></div>
+
+    <section class="hero" id="hero" aria-labelledby="headline">
+      <h1 class="headline" id="headline">
+        <span class="sr-only">Hello, I’m Aerron</span>
+        <span class="hl" aria-hidden="true">
+          <span class="hl-word hl-hello"><span class="ch" style="--i:0">H</span><span class="ch" style="--i:1">e</span><span class="ch" style="--i:2">l</span><span class="ch" style="--i:3">l</span><span class="ch" style="--i:4">o</span><span class="ch" style="--i:5">,</span></span>
+
+          <span class="portrait" id="portrait">
+            <span class="portrait-draw"></span>
+            <span class="portrait-fill">
+              <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i><i class="blob b5"></i>
+            </span>
+            <span class="portrait-rim"></span>
+            <span class="portrait-photo"><img src="assets/img/aerron.webp" alt="" width="240" height="226" decoding="async"></span>
+            <span class="fsel portrait-sel"><span class="fsel-name">me.png</span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">336 × 227</span></span>
+          </span>
+
+          <span class="hl-word hl-im"><span class="ch" style="--i:0">I</span><span class="ch" style="--i:1">’</span><span class="ch" style="--i:2">m</span></span>
+
+          <span class="name" id="name">
+            <span class="name-rot" id="nameRot">
+              <span class="name-text" id="nameText"><span class="ty">A</span><span class="ty">e</span><span class="ty">r</span><span class="ty">r</span><span class="ty">o</span><span class="ty">n</span></span>
+              <span class="caret" id="caret"></span>
+              <span class="fsel name-sel" id="nameSel"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims" id="nameDims">306 × 125.18</span></span>
+            </span>
+          </span>
+        </span>
+      </h1>
+
+      <p class="lede" id="lede">designing where people and technology meet. <span class="emo">✨</span> Drawn to teamwork,<br class="br-wide"> clean interfaces, and the magic of digital solutions. <span class="emo">💻</span></p>
+    </section>
+
+    <div class="playground" id="playground" role="group" aria-label="Skills playground. Drag the pills around, or press a pill to swap its word.">
+      <button class="pill" type="button" data-word="0">Software</button>
+      <button class="pill" type="button" data-word="1">Creation</button>
+      <button class="pill" type="button" data-word="2">Thinking Systems</button>
+      <button class="pill" type="button" data-word="3">Prototyping</button>
+      <button class="pill" type="button" data-word="4">Development</button>
+      <button class="pill" type="button" data-word="5">SDLC</button>
+      <span class="ball ball-github" aria-hidden="true"><span class="ball-in"><svg viewBox="0 0 24 24"><use href="#b-github"/></svg></span></span>
+      <span class="ball ball-claude" aria-hidden="true"><span class="ball-in"><svg viewBox="0 0 24 24"><use href="#b-claude"/></svg></span></span>
+      <span class="ball ball-python" aria-hidden="true"><span class="ball-in"><svg viewBox="0 0 128 128"><use href="#b-python"/></svg></span></span>
+      <span class="ball ball-figma" aria-hidden="true"><span class="ball-in"><svg viewBox="0 0 128 128"><use href="#b-figma"/></svg></span></span>
+      <span class="ball ball-azure" aria-hidden="true"><span class="ball-in"><svg viewBox="0 0 128 128"><use href="#b-azure"/></svg></span></span>
+    </div>
+    <p class="sr-only" id="pillStatus" aria-live="polite"></p>
+
+    <div class="fig-cursor" id="figCursor" aria-hidden="true">
+      <svg class="fc-arrow" viewBox="0 0 26 26"><use href="#fig-arrow"/></svg>
+      <span class="fc-chat" id="fcChat"><span class="fc-text" id="fcText"></span><i class="fc-caret"></i></span>
+    </div>
+
+    <nav class="folders" id="folders" aria-label="Sections">
+      <div class="folder" data-id="about" style="--i:0">
+        <div class="papers" aria-hidden="true">
+          <div class="paper pp-photo"><div class="pp-photo-img"><img src="assets/img/aerron.webp" alt="" loading="lazy"></div><span class="pp-cap">me.png</span></div>
+          <div class="paper pp-note"><span>hi, I’m Aerron!</span></div>
+          <div class="paper pp-chips"><span style="--c:#7040FC">Figma</span><span style="--c:#2C70DC">React</span><span style="--c:#84AC1C">Python</span><span style="--c:#F07820">FastAPI</span><span style="--c:#FC646C">LangGraph</span></div>
+        </div>
+        <a class="face" href="#about"><span class="folder-label">About me</span><span class="folder-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+        <svg class="folder-rim" aria-hidden="true" focusable="false"><path d=""/></svg>
+      </div>
+
+      <div class="folder" data-id="projects" style="--i:1">
+        <div class="papers" aria-hidden="true">
+          <div class="paper pp-cover" style="--pa:#7040FC"><span class="pp-flow"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><b>ARKIVE</b></div>
+          <div class="paper pp-cover" style="--pa:#0E9F86"><span class="pp-badge"><svg class="icon"><use href="#i-check"/></svg></span><b>CheckMatePH</b></div>
+          <div class="paper pp-cover" style="--pa:#2C70DC"><span class="pp-badge"><svg class="icon"><use href="#i-key"/></svg></span><b>Unloque</b></div>
+        </div>
+        <a class="face" href="#projects"><span class="folder-label">Projects</span><span class="folder-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+        <svg class="folder-rim" aria-hidden="true" focusable="false"><path d=""/></svg>
+      </div>
+
+      <div class="folder" data-id="certs" style="--i:2">
+        <div class="papers" aria-hidden="true">
+          <div class="paper pp-pass" style="--pc:#7040FC"><i></i><b></b><b class="s"></b></div>
+          <div class="paper pp-pass" style="--pc:#F04C20"><i></i><b></b><b class="s"></b></div>
+          <div class="paper pp-pass" style="--pc:#2C70DC"><i></i><b></b><b class="s"></b></div>
+        </div>
+        <a class="face" href="#certifications"><span class="folder-label">Certifications</span><span class="folder-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+        <svg class="folder-rim" aria-hidden="true" focusable="false"><path d=""/></svg>
+      </div>
+
+      <div class="folder" data-id="resume" style="--i:3">
+        <div class="papers" aria-hidden="true">
+          <div class="paper pp-doc"><b class="h"></b><b class="k"></b><b></b><b class="s"></b><b></b><b class="s"></b></div>
+          <div class="paper pp-pdf"><span>PDF</span><b></b><b class="s"></b></div>
+          <div class="paper pp-doc"><b class="k"></b><b></b><b class="s"></b><b></b><b></b><b class="s"></b></div>
+        </div>
+        <a class="face" href="#resume"><span class="folder-label">Resume</span><span class="folder-go" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></span></a>
+        <svg class="folder-rim" aria-hidden="true" focusable="false"><path d=""/></svg>
+      </div>
+    </nav>
+  </div>
+</div>
+
+  <div class="marquee tape" aria-label="UI/UX lead, researcher, software engineer, front-end developer, DOST-SEI scholar, top 6 at SIKAPTala 2026, consistent Dean’s lister. Design and code in one loop.">
+    <div class="marquee-track" id="tapeTrack" data-marquee>
+      <ul class="marquee-group" aria-hidden="true">
+        <li>UI/UX Lead</li><li class="tape-spark" style="--c:var(--nav-about);--k:0"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>Researcher</li><li class="tape-spark" style="--c:var(--nav-projects);--k:1"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>Software Engineer</li><li class="tape-spark" style="--c:var(--nav-certs);--k:2"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>Front-end Developer</li><li class="tape-spark" style="--c:var(--nav-resume);--k:3"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>DOST-SEI Scholar</li><li class="tape-spark" style="--c:var(--nav-about);--k:4"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>Top 6 · SIKAPTala 2026</li><li class="tape-spark" style="--c:var(--nav-projects);--k:5"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>Consistent Dean’s Lister</li><li class="tape-spark" style="--c:var(--nav-certs);--k:6"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+        <li>Design and code in one loop</li><li class="tape-spark" style="--c:var(--nav-resume);--k:7"><svg viewBox="0 0 24 24"><use href="#i-spark"/></svg></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canvas" id="canvas">
+    <div class="cv-dots" aria-hidden="true"></div>
+
+    <div class="pn-rail" id="pnRail">
+      <nav class="pagenav" id="pagenav" aria-label="Sections">
+        <div class="pn-track">
+          <div class="pn-scroll" id="pnScroll">
+            <span class="pn-glide" id="pnGlide" aria-hidden="true"></span>
+            <a class="pn-item is-current" href="#about" data-sec="about" aria-current="true" style="--dot:var(--nav-about);--tint:var(--nav-about-tint)"><i aria-hidden="true"></i>About me</a>
+            <a class="pn-item" href="#projects" data-sec="projects" style="--dot:var(--nav-projects);--tint:var(--nav-projects-tint)"><i aria-hidden="true"></i>Projects</a>
+            <a class="pn-item" href="#certifications" data-sec="certifications" style="--dot:var(--nav-certs);--tint:var(--nav-certs-tint)"><i aria-hidden="true"></i>Certifications</a>
+            <a class="pn-item" href="#resume" data-sec="resume" style="--dot:var(--nav-resume);--tint:var(--nav-resume-tint)"><i aria-hidden="true"></i>Resume</a>
+            <a class="pn-item" href="#contact" data-sec="contact" style="--dot:var(--nav-contacts);--tint:var(--nav-contacts-tint)"><i aria-hidden="true"></i>Contacts</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="sec about" id="about" tabindex="-1" aria-labelledby="about-title">
+      <div class="sec-frame">
+
+        <header class="sec-head">
+          <h2 class="sec-title" id="about-title">
+            <svg class="sec-num" viewBox="0 0 640 700" aria-hidden="true" focusable="false">
+              <path pathLength="1" d="M14 350Q37 233 80.5 155.5Q124 78 175 39Q226 0 277 0Q328 0 364 39Q400 78 413.5 155.5Q427 233 405 350Q383 467 339 544.5Q295 622 244 661Q193 700 142.5 700Q92 700 56 661Q20 622 6 544.5Q-8 467 14 350Z"/>
+              <path pathLength="1" d="M86 350Q65 459 69.5 532Q74 605 95 641.5Q116 678 148.5 678Q181 678 216 641.5Q251 605 283.5 532Q316 459 337 350Q359 238 354.5 165Q350 92 329 56.5Q308 21 275 22.5Q242 24 207 61Q172 98 139.5 170.5Q107 243 86 350Z"/>
+              <path pathLength="1" d="M331 700 334 688Q366 688 387 673.5Q408 659 416 625L522 178Q527 158 524.5 145.5Q522 133 514.5 126Q507 119 495.5 117Q484 115 470 115L473 103Q527 103 566.5 73Q606 43 624 0H635L612 95L604 127L486 625Q479 654 495 671Q511 688 539 688L536 700Z"/>
+            </svg>
+            <span class="sr-only">About me</span>
+            <span class="sec-word" aria-hidden="true"><span class="ch" style="--i:0">A</span><span class="ch" style="--i:1">b</span><span class="ch" style="--i:2">o</span><span class="ch" style="--i:3">u</span><span class="ch" style="--i:4">t</span> <span class="ch" style="--i:6">m</span><span class="ch" style="--i:7">e</span></span>
+          </h2>
+
+          <div class="portrait ab-portrait" aria-hidden="true">
+            <span class="portrait-draw"></span>
+            <span class="portrait-fill">
+              <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i><i class="blob b5"></i>
+            </span>
+            <span class="portrait-rim"></span>
+            <span class="portrait-photo"><img src="assets/img/aerron.webp" alt="" width="240" height="226" decoding="async"></span>
+            <span class="fsel portrait-sel"><span class="fsel-name">me.png</span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">336 × 232</span></span>
+          </div>
+
+          <p class="sec-statement">I design the screens people <br class="br-d">touch, and help build the <br class="br-d">systems behind them</p>
+        </header>
+
+        <div class="ab-grid">
+
+          <section class="frame f-intro" data-reveal aria-labelledby="t-intro">
+            <h3 class="frame-name" id="t-intro">Intro</h3>
+            <div class="card">
+              <h4 class="hi rv" style="--o:.22s">Hi, I’m Aerron <span class="wave" aria-hidden="true">👋</span></h4>
+              <div class="intro-copy">
+                <p class="rv" style="--o:.32s"> I'm a Computer Science student focused on practical, user-centered digital solutions. Brings UI/UX design and software engineering fundamentals, along with a collaborative and organized approach to working in teams. Adapts to unfamiliar tools, keeps commitments on schedule, and values clear communication throughout a project. Seeking a role in a professional team to contribute steady, dependable work while continuing to learn.</p>
+                <p class="rv" style="--o:.32s">Currently seeking a role in a professional team to contribute steady, dependable work while continuing to learn.</p>
+              </div>
+              <ul class="tags tags-role" aria-label="Roles">
+                <li style="--c:#FF3900;--w:128">UI/UX Lead</li>
+                <li style="--c:#0073E4;--w:128">Researcher</li>
+                <li style="--c:#793DFF;--w:171">Software Engineer</li>
+                <li style="--c:#79AD00;--w:201">Front-end Developer</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="frame f-edu" data-reveal aria-labelledby="t-edu">
+            <h3 class="frame-name" id="t-edu">Education</h3>
+            <div class="card">
+              <h4 class="edu-school rv" style="--o:.2s">Manuel S. Enverga University Foundation</h4>
+              <p class="edu-degree rv" style="--o:.3s">BS Computer Science, major in Software Engineering • Expected June&nbsp;2027</p>
+              <p class="gwa rv" style="--o:.38s"><b class="gwa-num" data-count="1.36" aria-hidden="true">1.36</b><span class="sr-only">1.36</span><span class="gwa-cap">GWA<br>1.00 highest</span></p>
+              <ul class="tags tags-badge" aria-label="Honors">
+                <li style="--c:#3299FF;--w:154">DOST-SEI Scholar</li>
+                <li style="--c:#FA4F4F;--w:154">Academic Scholar</li>
+                <li style="--c:#FF9914;--w:171">Consistent Dean’s Lister</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="frame f-lead" data-reveal aria-labelledby="t-lead">
+            <h3 class="frame-name" id="t-lead">Leadership</h3>
+            <div class="card">
+              <p class="kicker rv" style="--o:.18s"><svg class="kicker-flag" aria-hidden="true"><use href="#i-flag"/></svg>Leading teams</p>
+              <ol class="timeline">
+                <li style="--c:#FF7950;--i:0"><span class="tl-when">2024 – 25</span><b class="tl-role">Creatives Committee Head</b><span class="tl-org">MSEUF DOST Scholars’ Guild</span></li>
+                <li style="--c:#00A1FF;--i:1"><span class="tl-when">2023 – 25</span><b class="tl-role">Creatives Co-Head</b><span class="tl-org">PSITES / MASTECH</span></li>
+                <li style="--c:#00C67B;--i:2"><span class="tl-when">Team lead</span><b class="tl-role">Unloque</b><span class="tl-org">Four-person product team</span></li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="frame f-tools" data-reveal aria-labelledby="t-tools">
+            <h3 class="frame-name" id="t-tools">Toolbox</h3>
+            <div class="card">
+              <div class="tool-row" style="--r:0">
+                <h4 class="tool-name">Design</h4>
+                <ul class="tags tags-tool">
+                  <li style="--c:#FF894B;--w:102">Figma</li>
+                  <li style="--c:#FF666C;--w:87">Canva</li>
+                  <li style="--c:#84AE1E;--w:114">Prototyping</li>
+                  <li style="--c:#7040FF;--w:107">Branding</li>
+                </ul>
+              </div>
+              <div class="tool-row" style="--r:1">
+                <h4 class="tool-name">Build</h4>
+                <ul class="tags tags-tool">
+                  <li style="--c:#DB3212;--w:99">Python</li>
+                  <li style="--c:#4A91FB;--w:93">React</li>
+                  <li style="--c:#E66000;--w:92">Next.js</li>
+                  <li style="--c:#00BF71;--w:95">Flutter</li>
+                  <li style="--c:#E64CB0;--w:84">SwiftUI</li>
+                </ul>
+              </div>
+              <div class="tool-row" style="--r:2">
+                <h4 class="tool-name">Practice</h4>
+                <ul class="tags tags-tool">
+                  <li style="--c:#3974FF;--w:108">Git &amp; GitHub</li>
+                  <li style="--c:#0073E4;--w:93">Docker</li>
+                  <li style="--c:#EBA630;--w:105">PostgreSQL</li>
+                  <li style="--c:#E43D00;--w:95">Firebase</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <section class="ab-notes" data-reveal aria-labelledby="t-notes">
+          <h3 class="frame-name" id="t-notes">How I work</h3>
+          <ul class="notes">
+            <li class="note" style="--s:#FFE368;--r:-3.67deg;--x:68;--y:1049;--k:0"><div class="note-paper">
+                <p class="note-by"><i aria-hidden="true">A</i>Aerron</p>
+                <p class="note-say">Research first, pixels second.</p>
+                <p class="note-tag">User-centered design</p>
+            </div></li>
+            <li class="note" style="--s:#FFBFD5;--r:2.42deg;--x:409;--y:1050;--k:1"><div class="note-paper">
+                <p class="note-by"><i aria-hidden="true">A</i>Aerron</p>
+                <p class="note-say">Design and code in one loop.</p>
+                <p class="note-tag">Bridging design &amp; engineering</p>
+            </div></li>
+            <li class="note" style="--s:#AAF2D0;--r:-1.93deg;--x:747;--y:1059;--k:2"><div class="note-paper">
+                <p class="note-by"><i aria-hidden="true">A</i>Aerron</p>
+                <p class="note-say">Feedback is a feature.</p>
+                <p class="note-tag">Feedback &amp; Iteration</p>
+            </div></li>
+            <li class="note" style="--s:#BEE2FF;--r:1.68deg;--x:1082;--y:1058;--k:3"><div class="note-paper">
+                <p class="note-by"><i aria-hidden="true">A</i>Aerron</p>
+                <p class="note-say">Lead by Listening.</p>
+                <p class="note-tag">Active Listening</p>
+            </div></li>
+          </ul>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="sec projects" id="projects" tabindex="-1" aria-labelledby="projects-title">
+      <div class="sec-frame">
+
+        <header class="sec-head">
+          <h2 class="sec-title" id="projects-title">
+            <svg class="sec-num" viewBox="0 0 760 700" aria-hidden="true" focusable="false">
+              <path pathLength="1" d="M14 350Q37 233 80.5 155.5Q124 78 175 39Q226 0 277 0Q328 0 364 39Q400 78 413.5 155.5Q427 233 405 350Q383 467 339 544.5Q295 622 244 661Q193 700 142.5 700Q92 700 56 661Q20 622 6 544.5Q-8 467 14 350Z"/>
+              <path pathLength="1" d="M86 350Q65 459 69.5 532Q74 605 95 641.5Q116 678 148.5 678Q181 678 216 641.5Q251 605 283.5 532Q316 459 337 350Q359 238 354.5 165Q350 92 329 56.5Q308 21 275 22.5Q242 24 207 61Q172 98 139.5 170.5Q107 243 86 350Z"/>
+              <path pathLength="1" d="M464 200Q462 167 469 134Q476 101 493 74Q513 39 545.5 20Q578 1 613 0Q648 -1 680.5 16Q713 33 733 69Q750 100 752.5 139Q755 178 744 212Q736 241 716 277Q696 313 669 352.5Q642 392 610.5 432Q579 472 547 509.5Q515 547 485 578.5Q455 610 431 632H560Q602 632 637.5 613.5Q673 595 690 553H702L654 700H341L344 688Q372 658 407 622Q442 586 478.5 546Q515 506 550.5 463.5Q586 421 615.5 378.5Q645 336 666.5 294.5Q688 253 696 216Q706 170 694.5 138Q683 106 660 88.5Q637 71 607.5 68.5Q578 66 551 79.5Q524 93 504 123Q484 153 480 200Z"/>
+            </svg>
+            <span class="sr-only">Projects</span>
+            <span class="sec-word" aria-hidden="true"><span class="ch" style="--i:0">P</span><span class="ch" style="--i:1">r</span><span class="ch" style="--i:2">o</span><span class="ch" style="--i:3">j</span><span class="ch" style="--i:4">e</span><span class="ch" style="--i:5">c</span><span class="ch" style="--i:6">t</span><span class="ch" style="--i:7">s</span></span>
+          </h2>
+          <p class="sec-statement">Projects I led on concept <br class="br-d">development, design iterations, <br class="br-d">and development process.</p>
+        </header>
+
+        <div class="pj-list">
+          <div class="pj-cursor" id="pjCursor" aria-hidden="true"><svg class="pj-arrow" viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span class="pj-tag">Aerron</span></div>
+
+          <article class="pj" data-reveal data-cx="0.56" data-cy="0.74" style="--accent:#F2B01E" data-project="checkmateph" aria-labelledby="pj-checkmate">
+            <figure class="pj-shot">
+              <img src="assets/img/projects/checkmateph.webp" width="1280" height="832" alt="CheckMatePH cover: the app’s post composer and a claim card floating above a chessboard, next to a magnifying glass over the word FAKE." loading="lazy" decoding="async">
+              <span class="fsel pj-sel" aria-hidden="true"><span class="fsel-name">checkmateph-cover.png</span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">1280 × 832</span></span>
+              <div class="pj-comment pj-comment--left" style="--px:77%;--py:58%">
+                <button class="pj-pin" type="button" aria-expanded="false" aria-label="Comment from Aerron"><span aria-hidden="true">A</span></button>
+                <div class="pj-bubble" role="note"><p class="pj-who"><i aria-hidden="true">A</i>Aerron</p><p class="pj-said">Top 6 out of 70 teams at the national SIKAPTala Hackathon.</p></div>
+              </div>
+            </figure>
+            <div class="pj-body">
+              <p class="pj-status"><i aria-hidden="true"></i>SIKAPTala 2026 Hackathon · Top 6 of 70</p>
+              <h3 class="pj-name" id="pj-checkmate">CheckMatePH</h3>
+              <p class="pj-desc">A social media app that counters misinformation through evidence-based fact-checking, peer evaluation, and constructive criticism.</p>
+              <p class="pj-role"><span>Role</span>UI/UX lead, creative direction, pitch strategy</p>
+              <ul class="pj-tags" aria-label="Built with">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Supabase</li>
+              <li>OpenAI API</li>
+              </ul>
+              <div class="pj-actions">
+                <a class="pj-cta" href="#screens/checkmateph" data-screens="checkmateph" aria-haspopup="dialog" aria-label="View CheckMatePH screens"><svg class="icon" aria-hidden="true"><use href="#i-shots"/></svg>View screens</a>
+                <a class="pj-btn" href="https://github.com/Asvg18/checkmateph" target="_blank" rel="noopener" aria-label="CheckMatePH GitHub repo (opens in a new tab)"><svg class="icon fill" aria-hidden="true"><use href="#b-github"/></svg>GitHub repo<svg class="icon pj-out" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pj" data-reveal data-cx="0.3" data-cy="0.7" style="--accent:#1FBF85" data-project="arkive" aria-labelledby="pj-arkive">
+            <figure class="pj-shot">
+              <img src="assets/img/projects/arkive.webp" width="1504" height="977" alt="ARKIVE logo: an orange-to-red mark of three figures above the wordmark and the line Agentic, Runtime, Knowledge, Intelligent, Verified, Equity." loading="lazy" decoding="async">
+              <span class="fsel pj-sel" aria-hidden="true"><span class="fsel-name">arkive-cover.png</span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">2000 × 1299</span></span>
+              <div class="pj-comment pj-comment--left" style="--px:66%;--py:24%">
+                <button class="pj-pin" type="button" aria-expanded="false" aria-label="Comment from Aerron"><span aria-hidden="true">A</span></button>
+                <div class="pj-bubble" role="note"><p class="pj-who"><i aria-hidden="true">A</i>Aerron</p><p class="pj-said">Built to cut manual HR work at MSEUF, from job posting to hiring.</p></div>
+              </div>
+            </figure>
+            <div class="pj-body">
+              <p class="pj-status"><i aria-hidden="true"></i>Undergraduate thesis · In progress</p>
+              <h3 class="pj-name" id="pj-arkive">ARKIVE</h3>
+              <p class="pj-desc">A multi-agent hiring platform that takes manual HR work off a university’s plate, pairing AI-driven candidate matching with one streamlined workflow.</p>
+              <p class="pj-role"><span>Role</span>UI/UX lead, researcher, front-end developer</p>
+              <ul class="pj-tags" aria-label="Built with">
+              <li>React</li>
+              <li>FastAPI</li>
+              <li>LangGraph</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              </ul>
+              <div class="pj-actions">
+                <a class="pj-cta" href="#screens/arkive" data-screens="arkive" aria-haspopup="dialog" aria-label="View ARKIVE screens"><svg class="icon" aria-hidden="true"><use href="#i-shots"/></svg>View screens</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pj" data-reveal data-cx="0.62" data-cy="0.3" style="--accent:#2E9BF6" data-project="unloque" aria-labelledby="pj-unloque">
+            <figure class="pj-shot">
+              <img src="assets/img/projects/unloque.webp" style="object-position: 0 50%" width="1504" height="846" alt="Unloque cover: the logo with education, healthcare, and social program cards beside two phones showing the My Applications screen." loading="lazy" decoding="async">
+              <span class="fsel pj-sel" aria-hidden="true"><span class="fsel-name">unloque-cover.png</span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">1920 × 1080</span></span>
+              <div class="pj-comment" style="--px:25%;--py:82%">
+                <button class="pj-pin" type="button" aria-expanded="false" aria-label="Comment from Aerron"><span aria-hidden="true">A</span></button>
+                <div class="pj-bubble" role="note"><p class="pj-who"><i aria-hidden="true">A</i>Aerron</p><p class="pj-said">Map-based aid heatmaps, so help is easy to find and to see.</p></div>
+              </div>
+            </figure>
+            <div class="pj-body">
+              <p class="pj-status"><i aria-hidden="true"></i>Government programs app · Four-person team</p>
+              <h3 class="pj-name" id="pj-unloque">Unloque</h3>
+              <p class="pj-desc">A government welfare platform that helps marginalized Filipino communities discover, track, and seek aid, with map-based heatmaps that make help easy to see.</p>
+              <p class="pj-role"><span>Role</span>Team lead, concept, UI/UX, research, branding</p>
+              <ul class="pj-tags" aria-label="Built with">
+              <li>Flutter</li>
+              <li>Firebase</li>
+              <li>Next.js</li>
+              </ul>
+              <div class="pj-actions">
+                <a class="pj-cta" href="#screens/unloque" data-screens="unloque" aria-haspopup="dialog" aria-label="View Unloque screens"><svg class="icon" aria-hidden="true"><use href="#i-shots"/></svg>View screens</a>
+                <a class="pj-btn" href="https://github.com/Asvg18/Unloque" target="_blank" rel="noopener" aria-label="Unloque GitHub repo (opens in a new tab)"><svg class="icon fill" aria-hidden="true"><use href="#b-github"/></svg>GitHub repo<svg class="icon pj-out" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sec certs" id="certifications" tabindex="-1" aria-labelledby="certs-title">
+      <div class="sec-frame">
+
+        <header class="sec-head">
+          <h2 class="sec-title" id="certs-title">
+            <svg class="sec-num" viewBox="0 0 775 700" aria-hidden="true" focusable="false">
+              <path pathLength="1" d="M14 350Q37 233 80.5 155.5Q124 78 175 39Q226 0 277 0Q328 0 364 39Q400 78 413.5 155.5Q427 233 405 350Q383 467 339 544.5Q295 622 244 661Q193 700 142.5 700Q92 700 56 661Q20 622 6 544.5Q-8 467 14 350Z"/>
+              <path pathLength="1" d="M86 350Q65 459 69.5 532Q74 605 95 641.5Q116 678 148.5 678Q181 678 216 641.5Q251 605 283.5 532Q316 459 337 350Q359 238 354.5 165Q350 92 329 56.5Q308 21 275 22.5Q242 24 207 61Q172 98 139.5 170.5Q107 243 86 350Z"/>
+              <path pathLength="1" d="M495 200Q493 167 499 134Q505 101 521 74Q540 42 568 24Q596 6 626.5 1.5Q657 -3 686.5 5Q716 13 736.5 33.5Q757 54 765.5 86Q774 118 763 162Q756 193 741 218.5Q726 244 707 264.5Q688 285 667.5 299Q647 313 629 321Q664 331 685 356.5Q706 382 714.5 416Q723 450 719 488Q715 526 700 562.5Q685 599 659 630Q633 661 598 679Q580 688 560.5 693.5Q541 699 519 700Q483 702 456 693Q429 684 412 669Q397 655 388.5 636.5Q380 618 382 600Q384 584 391 571Q405 549 427 544Q449 539 466 551Q474 556 479 565.5Q484 575 485.5 585Q487 595 484 605Q481 615 473 621Q462 630 464 646.5Q466 663 483 672Q506 682 534.5 676.5Q563 671 582 658Q617 635 636 594Q655 553 656.5 508.5Q658 464 640.5 425Q623 386 584 368Q544 349 492 355L506 334Q533 330 557.5 324.5Q582 319 605 310Q631 299 653 278Q675 257 690 230.5Q705 204 710 174.5Q715 145 706 118Q698 95 681.5 83Q665 71 645 68.5Q625 66 604 72Q583 78 566 90Q541 108 526 138Q511 168 509 200Z"/>
+            </svg>
+            <span class="sr-only">Certifications</span>
+            <span class="sec-word" aria-hidden="true"><span class="ch" style="--i:0">C</span><span class="ch" style="--i:1">e</span><span class="ch" style="--i:2">r</span><span class="ch" style="--i:3">t</span><span class="ch" style="--i:4">i</span><span class="ch" style="--i:5">f</span><span class="ch" style="--i:6">i</span><span class="ch" style="--i:7">c</span><span class="ch" style="--i:8">a</span><span class="ch" style="--i:9">t</span><span class="ch" style="--i:10">i</span><span class="ch" style="--i:11">o</span><span class="ch" style="--i:12">n</span><span class="ch" style="--i:13">s</span></span>
+          </h2>
+          <p class="sec-statement">Proof of continuous learning, <br class="br-d">logged like version history.</p>
+        </header>
+
+        <div class="vh-grid">
+          <section class="frame f-vh" data-reveal aria-labelledby="t-vh">
+            <h3 class="frame-name" id="t-vh">Version history</h3>
+            <div class="card vh">
+              <div class="vh-head"><span>Version history</span><small id="vhCount"></small></div>
+              <div class="vh-filter" role="group" aria-label="Show by type">
+                <button class="vh-chip" type="button" data-filter="all" aria-pressed="true">All <i></i></button>
+                <button class="vh-chip" type="button" data-filter="spec" aria-pressed="false">Specializations <i></i></button>
+                <button class="vh-chip" type="button" data-filter="course" aria-pressed="false">Courses <i></i></button>
+                <button class="vh-chip" type="button" data-filter="event" aria-pressed="false">Events <i></i></button>
+              </div>
+              <div class="vh-list" id="vhList" role="tablist" aria-label="Certifications and activities" aria-orientation="vertical"></div>
+            </div>
+          </section>
+
+          <article class="vh-preview" id="vhPanel" role="tabpanel" data-reveal>
+            <div class="pass" id="pass">
+              <div class="pass-face pass-front">
+                <div class="pass-top">
+                  <span class="pass-seal" aria-hidden="true"><svg class="icon"><use href="#i-seal"/></svg></span>
+                  <span class="pass-chips"><span class="pass-type" id="passType"></span><span class="pass-role" id="passRole"></span></span>
+                </div>
+                <p class="pass-title" id="passTitle"></p>
+                <div class="pass-bottom">
+                  <p><small>Awarded to</small>Aerron Sander V. Gumarao</p>
+                  <p><small>Issued by</small><b id="passIssuer"></b></p>
+                  <p class="pass-date"><small>Date</small><b id="passDate"></b></p>
+                </div>
+                <span class="pass-shine" aria-hidden="true"></span>
+              </div>
+              <div class="pass-face pass-back" aria-hidden="true">
+                <img class="pass-img" id="passImg" alt="" width="1600" height="1237" loading="lazy" decoding="async">
+                <p class="pass-empty" id="passEmpty" hidden><svg class="icon" aria-hidden="true"><use href="#i-seal"/></svg>The certificate file is on its way.</p>
+              </div>
+            </div>
+            <span class="flip-hint" id="flipHint" aria-hidden="true"><svg viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span>Click to flip!</span></span>
+            <div class="pass-meta">
+              <p class="pass-note" id="passNote"></p>
+              <ul class="pass-skills" id="passSkills" aria-label="Skills"></ul>
+              <div class="pass-actions">
+                <button class="cv-btn cv-btn--ink pass-flip" id="passFlip" type="button" aria-pressed="false" aria-controls="pass"><svg class="icon" aria-hidden="true"><use href="#i-flip"/></svg><span>See the certificate</span></button>
+                <a class="cv-btn pass-link" id="passLink" href="#" target="_blank" rel="noopener"><span>Verify on Coursera</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sec resume" id="resume" tabindex="-1" aria-labelledby="resume-title">
+      <div class="sec-frame">
+
+        <header class="sec-head">
+          <h2 class="sec-title" id="resume-title">
+            <svg class="sec-num" viewBox="0 0 820 700" aria-hidden="true" focusable="false">
+              <path pathLength="1" d="M14 350Q37 233 80.5 155.5Q124 78 175 39Q226 0 277 0Q328 0 364 39Q400 78 413.5 155.5Q427 233 405 350Q383 467 339 544.5Q295 622 244 661Q193 700 142.5 700Q92 700 56 661Q20 622 6 544.5Q-8 467 14 350Z"/>
+              <path pathLength="1" d="M86 350Q65 459 69.5 532Q74 605 95 641.5Q116 678 148.5 678Q181 678 216 641.5Q251 605 283.5 532Q316 459 337 350Q359 238 354.5 165Q350 92 329 56.5Q308 21 275 22.5Q242 24 207 61Q172 98 139.5 170.5Q107 243 86 350Z"/>
+              <path pathLength="1" d="M767 491H698L666 625Q659 654 674.5 671Q690 688 719 688L716 700H511L514 688Q546 688 567 673.5Q588 659 596 625L628 491H381L397 471L783 0H814L776 162L704 467H772ZM716 120 432 467H633Z"/>
+            </svg>
+            <span class="sr-only">Resume</span>
+            <span class="sec-word" aria-hidden="true"><span class="ch" style="--i:0">R</span><span class="ch" style="--i:1">e</span><span class="ch" style="--i:2">s</span><span class="ch" style="--i:3">u</span><span class="ch" style="--i:4">m</span><span class="ch" style="--i:5">e</span></span>
+          </h2>
+          <p class="sec-statement">Everything above, on one page.</p>
+        </header>
+
+        <div class="rs-grid">
+          <section class="frame f-paper" data-reveal aria-labelledby="t-paper">
+            <h3 class="frame-name" id="t-paper"><span class="sr-only">Resume preview</span></h3>
+            <div class="card rs-card">
+              <div class="rs-bar">
+                <span class="rs-file"><svg class="icon" aria-hidden="true"><use href="#i-hash"/></svg>Aerron-Gumarao-Resume</span>
+                <div class="rs-zoom" role="group" aria-label="Zoom">
+                  <button type="button" data-zoom="-1" aria-label="Zoom out"><svg class="icon" aria-hidden="true"><use href="#i-minus"/></svg></button>
+                  <output id="rsZoom" aria-label="Zoom level">100%</output>
+                  <button type="button" data-zoom="1" aria-label="Zoom in"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+                </div>
+              </div>
+              <div class="rs-stage" role="region" aria-label="Resume preview" tabindex="0">
+                <a class="rs-paper" id="rsPaper" href="assets/files/Aerron-Gumarao-Resume.pdf" target="_blank" rel="noopener" aria-label="Open the resume PDF (opens in a new tab)">
+                  <img src="assets/img/resume-preview.jpg" alt="Preview of Aerron’s one-page resume" width="1360" height="1760" loading="lazy" decoding="async">
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <aside class="frame f-inspect" data-reveal aria-labelledby="t-inspect">
+            <h3 class="frame-name" id="t-inspect">Inspect</h3>
+            <div class="card ins">
+              <div class="ins-tabs" aria-hidden="true"><span>Design</span><span>Prototype</span><span class="is-on">Inspect</span></div>
+              <section class="ins-sec" aria-labelledby="t-props">
+                <h4 id="t-props">Properties</h4>
+                <dl class="props">
+                  <dt>Name</dt><dd>Aerron Sander V. Gumarao</dd>
+                  <dt>Role</dt><dd>CS student, Software Engineering</dd>
+                  <dt>Focus</dt><dd>UI/UX · Research · Front-end</dd>
+                  <dt>Based in</dt><dd>San Pablo City, Laguna</dd>
+                  <dt>Graduating</dt><dd>June 2027</dd>
+                  <dt>GWA</dt><dd>1.36</dd>
+                </dl>
+              </section>
+              <section class="ins-sec" aria-labelledby="t-hl">
+                <h4 id="t-hl">Highlights</h4>
+                <ul class="ins-hl">
+                  <li><i style="--c:#F04C20" aria-hidden="true"></i>Top 6 of 70 teams, SIKAPTala 2026</li>
+                  <li><i style="--c:#2C70DC" aria-hidden="true"></i>DOST-SEI Undergraduate Scholar</li>
+                  <li><i style="--c:#84AC1C" aria-hidden="true"></i>Led 3 teams and committees</li>
+                  <li><i style="--c:#7040FC" aria-hidden="true"></i>HKUST Software Engineering Specialization</li>
+                </ul>
+              </section>
+              <section class="ins-sec" aria-labelledby="t-export">
+                <h4 id="t-export">Export</h4>
+                <div class="ins-export" aria-hidden="true"><span class="ins-name">Resume</span><span class="ins-chip">1x</span><span class="ins-chip">PDF</span></div>
+                <a class="cv-btn cv-btn--ink cv-btn--block" href="assets/files/Aerron-Gumarao-Resume.pdf" download="Aerron-Gumarao-Resume.pdf"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Export Resume.pdf</a>
+                <a class="cv-btn cv-btn--ghost cv-btn--block" href="assets/files/Aerron-Gumarao-Resume.pdf" target="_blank" rel="noopener">Open in a new tab<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+              </section>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="sec contact" id="contact" tabindex="-1" aria-labelledby="contact-title">
+      <div class="sec-frame">
+
+        <div class="lw-cursors" aria-hidden="true">
+          <span class="mcur" style="--c:#F24E1E;--x:104;--y:206;--dl:0s"><svg viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span>Recruiter</span></span>
+          <span class="mcur" style="--c:#0ACF83;--x:1262;--y:178;--dl:-4s"><svg viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span>Teammate</span></span>
+          <span class="mcur" style="--c:#A259FF;--x:236;--y:690;--dl:-8s"><svg viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span>Founder</span></span>
+          <span class="mcur" style="--c:#FFC700;--t:#1E1E1E;--x:1186;--y:724;--dl:-11s"><svg viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span>Design lead</span></span>
+        </div>
+
+        <header class="sec-head lw-head">
+          <h2 class="lw-title" id="contact-title">
+            <span class="sr-only">Let’s work together!</span>
+            <span class="lw-h" aria-hidden="true">
+              <span class="lw-line"><span class="ch" style="--i:0">L</span><span class="ch" style="--i:1">e</span><span class="ch" style="--i:2">t</span><span class="ch" style="--i:3">’</span><span class="ch" style="--i:4">s</span><span class="portrait lw-duo">
+                  <span class="portrait-draw"></span>
+                  <span class="portrait-fill"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i><i class="blob b5"></i></span>
+                  <span class="portrait-rim"></span>
+                  <span class="portrait-photo lw-you"><svg class="lw-seat" viewBox="0 0 240 226"><path d="M6 250C8 198 42 168 92 157Q99 155 99 147V134A52 52 0 1 1 141 134V147Q141 155 148 157C198 168 232 198 234 250Z"/><text x="120" y="97">you</text></svg></span>
+                  <span class="portrait-photo lw-me"><img src="assets/img/aerron.webp" alt="" width="240" height="226" decoding="async"></span>
+                  <span class="fsel portrait-sel"><span class="fsel-name">us.png</span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">366 × 194</span></span>
+                  <span class="mcur mcur-you" style="--c:#FF7262"><svg viewBox="0 0 26 26"><use href="#fig-arrow"/></svg><span>You?</span></span>
+                </span><span class="ch" style="--i:5">w</span><span class="ch" style="--i:6">o</span><span class="ch" style="--i:7">r</span><span class="ch" style="--i:8">k</span></span>
+              <span class="lw-line"><span class="lw-sel"><span class="ch" style="--i:9">t</span><span class="ch" style="--i:10">o</span><span class="ch" style="--i:11">g</span><span class="ch" style="--i:12">e</span><span class="ch" style="--i:13">t</span><span class="ch" style="--i:14">h</span><span class="ch" style="--i:15">e</span><span class="ch" style="--i:16">r</span><span class="ch" style="--i:17">!</span><span class="fsel lw-fsel"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims">You × Aerron</span></span></span></span>
+            </span>
+          </h2>
+          <p class="sec-statement lw-lede">I’m open to internships, design and front-end roles, and teams building something that matters. Tell me what you’re working on.</p>
+        </header>
+
+        <div class="lw-tools" data-reveal role="group" aria-label="Ways to reach me">
+          <div class="tb-menu" id="mailBox">
+            <button class="tb tb-mail" id="mailBtn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="mailMenu" data-tip="Write me an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>aerronsandergumarao@gmail.com</span><svg class="icon tb-caret" aria-hidden="true"><use href="#i-caret"/></svg></button>
+            <div class="mm" id="mailMenu" role="menu" aria-labelledby="mailBtn" hidden>
+              <p class="mm-head" aria-hidden="true">Open a draft in</p>
+              <a class="mm-item" role="menuitem" data-mail="gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=aerronsandergumarao%40gmail.com&amp;su=Let%E2%80%99s%20work%20together" target="_blank" rel="noopener"><svg class="mm-ico" aria-hidden="true"><use href="#b-gmail"/></svg><span>Gmail</span><svg class="icon mm-out" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="mm-item" role="menuitem" data-mail="outlook" href="https://outlook.live.com/mail/0/deeplink/compose?to=aerronsandergumarao%40gmail.com&amp;subject=Let%E2%80%99s%20work%20together" target="_blank" rel="noopener"><svg class="mm-ico" aria-hidden="true"><use href="#b-outlook"/></svg><span>Outlook</span><svg class="icon mm-out" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="mm-item mm-app" role="menuitem" data-mail="app" href="mailto:aerronsandergumarao@gmail.com?subject=Let%E2%80%99s%20work%20together" aria-describedby="mmAppNote"><svg class="icon mm-ico" aria-hidden="true"><use href="#i-device"/></svg><span class="mm-two"><span class="mm-t">Your mail app<em class="mm-tag">Best on phones</em></span><small id="mmAppNote">Opens the email app on this device</small></span></a>
+              <i class="mm-sep" aria-hidden="true"></i>
+              <button class="mm-item mm-copy" type="button" role="menuitem" data-copy="aerronsandergumarao@gmail.com" data-copied="Email copied"><svg class="icon mm-ico" aria-hidden="true"><use href="#i-copy"/></svg><span data-done="Copied to clipboard">Copy email address</span></button>
+            </div>
+          </div>
+          <i class="tb-sep" aria-hidden="true"></i>
+          <a class="tb" href="https://www.linkedin.com/in/aerron-sander-v-gumarao-38487b349" target="_blank" rel="noopener" data-tip="LinkedIn" aria-label="LinkedIn (opens in a new tab)"><svg class="icon fill" aria-hidden="true"><use href="#b-linkedin"/></svg></a>
+          <a class="tb" href="https://github.com/Asvg18" target="_blank" rel="noopener" data-tip="GitHub" aria-label="GitHub (opens in a new tab)"><svg class="icon fill" aria-hidden="true"><use href="#b-github"/></svg></a>
+          <i class="tb-sep" aria-hidden="true"></i>
+          <button class="tb tb-phone" type="button" data-copy="+63 966 223 2618" data-copied="Number copied" data-tip="Copy number" aria-label="Phone: +63 966 223 2618. Copy the number"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="tb-num">+63 966 223 2618</span></button>
+          <a class="tb tb-cv" href="#resume" data-tip="Jump up to my resume"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><span>Resume</span></a>
+        </div>
+
+      </div>
+
+      <footer class="foot">
+        <div class="marquee foot-marquee" aria-hidden="true">
+          <div class="marquee-track" id="footTrack" data-marquee>
+            <ul class="marquee-group">
+              <li>Say hello</li><li class="mq-emoji">✌️</li>
+              <li>Open to opportunities</li><li class="mq-emoji">🥺</li>
+              <li>Made in Figma</li><li class="mq-emoji">🍀</li>
+              <li>Built by hand</li><li class="mq-emoji">📍</li>
+              <li>Thanks for scrolling</li><li class="mq-emoji">✨</li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-row">
+          <p>© 2026 Aerron Sander V. Gumarao</p>
+          <p class="foot-note">Designed and made with shining hope.</p>
+          <a class="cv-btn foot-top" href="#home"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>Back to top</a>
+        </div>
+      </footer>
+    </section>
+
+  </div>
+
+</main>
+
+<dialog class="sv" id="screens" aria-labelledby="svTitle">
+  <div class="sv-shell" id="svShell">
+    <div class="sv-canvas">
+      <div class="sv-dots" aria-hidden="true"></div>
+      <div class="sv-top">
+        <nav class="sv-tabs" id="svTabs" aria-label="Projects">
+          <span class="sv-glide" id="svGlide" aria-hidden="true"></span>
+          <a class="sv-tab" href="#screens/checkmateph" data-project="checkmateph" style="--dot:#F2B01E"><i aria-hidden="true"></i>CheckMatePH</a>
+          <a class="sv-tab" href="#screens/arkive" data-project="arkive" style="--dot:#1FBF85"><i aria-hidden="true"></i>ARKIVE</a>
+          <a class="sv-tab" href="#screens/unloque" data-project="unloque" style="--dot:#2E9BF6"><i aria-hidden="true"></i>Unloque</a>
+        </nav>
+      </div>
+      <section class="sv-stage" id="svStage" aria-roledescription="carousel" aria-label="Screens">
+        <button class="sv-nav sv-prev" id="svPrev" type="button" aria-label="Previous screen"><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="sv-view" id="svView"></div>
+        <button class="sv-nav sv-next" id="svNext" type="button" aria-label="Next screen"><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      </section>
+      <div class="sv-film">
+        <div class="sv-strip" id="svStrip" role="group" aria-label="All screens"></div>
+        <p class="sv-count" id="svCount" aria-hidden="true"><b>01</b> / 05</p>
+      </div>
+    </div>
+
+    <aside class="sv-panel" aria-label="About this project">
+      <button class="sv-close" id="svClose" type="button" aria-label="Close screens"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <div class="sv-info" id="svInfo">
+        <p class="sv-status"><i aria-hidden="true"></i><span id="svStatus"></span></p>
+        <h2 class="sv-title" id="svTitle"></h2>
+        <div class="sv-note" id="svNote" aria-live="polite">
+          <p class="sv-note-k"><b id="svNum">01</b><span id="svName"></span><span class="sv-group" id="svGroup" hidden></span></p>
+          <p class="sv-say" id="svSay"></p>
+        </div>
+        <p class="sv-desc" id="svDesc"></p>
+        <dl class="sv-facts">
+          <div><dt>Role</dt><dd id="svRole"></dd></div>
+          <div><dt>Built with</dt><dd><ul class="sv-tags" id="svTags"></ul></dd></div>
+        </dl>
+        <a class="sv-cta" id="svCta" href="#" target="_blank" rel="noopener"><span id="svCtaLabel">View on GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="sv-keys" aria-hidden="true"><kbd>&larr;</kbd><kbd>&rarr;</kbd> to browse <span>&middot;</span> <kbd>esc</kbd> to close</p>
+    </aside>
+  </div>
+</dialog>
+
+<dialog class="cz" id="certView" aria-labelledby="czTitle">
+  <div class="cz-scrim" aria-hidden="true"></div>
+  <div class="cz-wrap" id="czWrap">
+    <div class="cz-top">
+      <div class="cz-info">
+        <p class="cz-kind" id="czKind"></p>
+        <h2 class="cz-title" id="czTitle"></h2>
+        <p class="cz-by" id="czBy"></p>
+      </div>
+      <button class="cz-close" id="czClose" type="button" data-tip="Close (esc)" aria-label="Close the certificate"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <figure class="cz-frame" id="czFrame">
+      <img class="cz-img" id="czImg" alt="" decoding="async">
+      <span class="fsel cz-sel" aria-hidden="true"><span class="fsel-name" id="czFile"></span><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i><span class="fsel-dims" id="czDims"></span></span>
+    </figure>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<span class="unit-probe" id="unitProbe" aria-hidden="true"></span>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js" defer></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Photo pill */
+.portrait {
+  position: relative;
+  display: inline-block;
+  width: 3.36em;
+  height: 1.6em;
+  letter-spacing: 0;
+}
+.portrait-fill {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0.8em;
+  background: #F76A6E;
+  filter: blur(0.035em);
+  transform: translateZ(0);
+}
+.blob {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  will-change: transform;
+}
+.b1 {
+  width: 2.6em; height: 2.6em; left: -0.4em; top: -1.6em;
+  background: radial-gradient(closest-side, #F7A51C 0%, rgba(247, 165, 28, 0.85) 35%, rgba(247, 165, 28, 0) 100%);
+  animation: b1 7.2s ease-in-out infinite alternate;
+}
+.b2 {
+  width: 2.4em; height: 2.4em; left: -1em; top: 0.1em;
+  background: radial-gradient(closest-side, #FF0AB4 0%, rgba(255, 10, 180, 0.8) 40%, rgba(255, 10, 180, 0) 100%);
+  animation: b2 6.4s ease-in-out infinite alternate;
+}
+.b3 {
+  width: 2.2em; height: 2.2em; left: 1.6em; top: -1em;
+  background: radial-gradient(closest-side, #FF7A3A 0%, rgba(255, 122, 58, 0.7) 45%, rgba(255, 122, 58, 0) 100%);
+  animation: b3 8.4s ease-in-out infinite alternate;
+}
+.b4 {
+  width: 2em; height: 2em; left: 1.9em; top: 0.4em;
+  background: radial-gradient(closest-side, #FF2D9B 0%, rgba(255, 45, 155, 0.7) 40%, rgba(255, 45, 155, 0) 100%);
+  animation: b4 5.6s ease-in-out infinite alternate;
+}
+.b5 {
+  width: 1em; height: 1em; left: 2.55em; top: 0.35em;
+  background: radial-gradient(closest-side, rgba(255, 238, 200, 0.95) 0%, rgba(255, 228, 176, 0.5) 45%, rgba(255, 228, 176, 0) 100%);
+  animation: b5 6.8s ease-in-out infinite alternate;
+}
+@keyframes b1 {
+  0% { transform: translate(1.5em, 0.3em) scale(0.9); }
+  35% { transform: translate(0.4em, 0.55em) scale(1.1); }
+  70% { transform: translate(-0.2em, 0.85em) scale(1.2); }
+  100% { transform: translate(0.9em, 0.15em) scale(1); }
+}
+@keyframes b2 {
+  0% { transform: translate(-0.1em, -0.9em) scale(1.1); }
+  50% { transform: translate(0.3em, 0.1em) scale(0.85); }
+  100% { transform: translate(0.9em, -0.3em) scale(1.15); }
+}
+@keyframes b3 {
+  0% { transform: translate(0, 0.2em) scale(1); }
+  50% { transform: translate(-1.2em, 0.6em) scale(1.2); }
+  100% { transform: translate(-0.4em, 1.1em) scale(0.9); }
+}
+@keyframes b4 {
+  0% { transform: translate(0.2em, -0.2em) scale(1); }
+  50% { transform: translate(-0.8em, 0.2em) scale(1.15); }
+  100% { transform: translate(0.1em, -0.9em) scale(0.9); }
+}
+@keyframes b5 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+  50% { transform: translate(-0.25em, -0.3em) scale(1.25); opacity: 0.6; }
+  100% { transform: translate(-0.05em, 0.25em) scale(0.9); opacity: 1; }
+}
+.portrait-rim {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.8em;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 0.012em rgba(255, 236, 190, 0.7),
+    inset 0 0 0.12em rgba(255, 243, 222, 0.45);
+  filter: blur(0.008em);
+}
+.portrait-photo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.62em;
+  bottom: 0;
+  clip-path: inset(0 0 0 0 round 0 0 0.8em 0.8em);
+  pointer-events: none;
+}
+.portrait-photo img {
+  position: absolute;
+  left: 50%;
+  bottom: -0.05em;
+  width: 2.4em;
+  height: 2.26em;
+  margin-left: -1.2em;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.portrait-draw {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--draw-fill);
+  box-shadow: 0 0 0 max(1px, 0.015em) var(--fig);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.portrait-sel { opacity: 0; transition: opacity 0.18s ease; }
+
+.portrait .portrait-sel { top: -0.67em; }
+.portrait:hover .portrait-sel { opacity: 1; }
