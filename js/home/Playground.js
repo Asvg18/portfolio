@@ -13,6 +13,7 @@ export class Playground {
   #nextWord;
   #onPlay;
   #stageRect;
+  #leaving = new WeakSet();
 
   items;
   pills;
@@ -109,16 +110,19 @@ export class Playground {
     item.element.style.width = `${toWidth}px`;
     this.#status.textContent = label;
 
-    const oldText = $(".pill-txt", item.element);
+    const oldTexts = $$(".pill-txt", item.element);
     const newText = createElement("span", { className: "pill-txt", text: label });
     item.element.append(newText);
     if (prefersReducedMotion()) {
-      oldText.remove();
+      oldTexts.forEach((text) => text.remove());
     } else {
       const timing = { duration: 380, easing: EASE_IOS, fill: "both" };
-      oldText.animate([{ transform: "translateY(0)", opacity: 1 }, { transform: "translateY(-115%)", opacity: 0 }], timing);
-      const removeOld = () => oldText.remove();
-      newText.animate([{ transform: "translateY(115%)", opacity: 0 }, { transform: "translateY(0)", opacity: 1 }], timing).finished.then(removeOld, removeOld);
+      oldTexts.filter((text) => !this.#leaving.has(text)).forEach((text) => {
+        this.#leaving.add(text);
+        const remove = () => text.remove();
+        text.animate([{ transform: "translateY(-115%)", opacity: 0 }], timing).finished.then(remove, remove);
+      });
+      newText.animate([{ transform: "translateY(115%)", opacity: 0 }, { transform: "translateY(0)", opacity: 1 }], timing);
     }
 
     item.resize = { from: fromWidth, to: toWidth, start: performance.now(), duration: 320 };
