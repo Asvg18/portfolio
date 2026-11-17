@@ -44,6 +44,10 @@ export class FolderStrip {
     });
   }
 
+  get ids() {
+    return FOLDER_IDS;
+  }
+
   get groundIds() {
     return ["about", "projects"];
   }
@@ -143,20 +147,20 @@ export class FolderStrip {
   #bind(id) {
     const { face } = this.#folders[id];
     face.addEventListener("pointerenter", (event) => {
-      if (event.pointerType === "mouse") this.#spotlight(id);
+      if (event.pointerType === "mouse") this.spotlight(id);
     });
     face.addEventListener("pointerleave", (event) => {
       if (event.pointerType === "mouse" && this.#spotlit === id) this.#clearSpotlight();
     });
     face.addEventListener("focus", () => {
-      if (face.matches(":focus-visible")) this.#spotlight(id);
+      if (face.matches(":focus-visible")) this.spotlight(id);
     });
     face.addEventListener("blur", () => {
       if (this.#spotlit === id) this.#clearSpotlight();
     });
   }
 
-  #spotlight(id) {
+  spotlight(id) {
     clearTimeout(this.#spotlightTimer);
     this.#spotlit = id;
     this.#nav.classList.toggle("is-spot", Boolean(id));
@@ -166,6 +170,6 @@ export class FolderStrip {
 
   #clearSpotlight() {
     clearTimeout(this.#spotlightTimer);
-    this.#spotlightTimer = setTimeout(() => this.#spotlight(null), 90);
+    this.#spotlightTimer = setTimeout(() => this.spotlight(null), 90);
   }
 }

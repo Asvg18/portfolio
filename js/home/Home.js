@@ -4,6 +4,7 @@ import { prefersReducedMotion, waitForFonts } from "../core/motion.js";
 import { skillPills } from "../data/skills.js";
 import { FigmaCursor } from "./FigmaCursor.js";
 import { FolderStrip } from "./FolderStrip.js";
+import { FolderTour } from "./FolderTour.js";
 import { NameTyper } from "./NameTyper.js";
 import { PillPhysics } from "./PillPhysics.js";
 import { Playground } from "./Playground.js";
@@ -11,12 +12,14 @@ import { StageMetrics } from "./StageMetrics.js";
 
 const HERO_FONTS = ['700 100px "Alte Haas Grotesk"', '400 30px "Alte Haas Grotesk"', '400 64px "Relationship of Melodrame"', '700 27px "Agdasima"'];
 const MAX_FRAME_MS = 100;
+const TOUR_DELAY_MS = 4400;
 
 export class Home {
   #stage;
   #metrics;
   #marquee;
   #folders;
+  #tour = null;
   #playground;
   #physics = null;
   #cursor;
@@ -37,6 +40,7 @@ export class Home {
     this.#folders = new FolderStrip($("#folders", root), this.#metrics, {
       onSpotlight: (id) => this.#physics?.lift(id),
     });
+    if (FolderTour.isWanted()) this.#tour = new FolderTour(this.#folders, $("#folders", root));
     this.#playground = new Playground($("#playground", root), {
       status: $("#pillStatus", root),
       words: skillPills,
@@ -88,6 +92,7 @@ export class Home {
     setTimeout(() => this.#name.type(), 900);
     setTimeout(() => this.#physics?.rain(), 2900);
     setTimeout(() => this.#cursor.enter(), 3100);
+    setTimeout(() => this.#tour?.start(), TOUR_DELAY_MS);
   }
 
   #startLoop() {

@@ -513,10 +513,9 @@ html:not(.js) .pill { padding: 0 calc(var(--pf) * 1.17); }
   .hl-im { order: 4; }
   .name { order: 5; }
   .lede { margin-top: calc(var(--hf) * 0.34); max-width: 24em; }
-  .papers, .folder-go { display: none; }
 }
 @media (hover: none) {
-  .papers { display: none; }
+  .face, .folder-rim, .folder-label, .folder-go, .paper { will-change: transform; }
 }
 @media (max-height: 640px) and (min-width: 768px) {
   .lede { margin-top: 0; }
