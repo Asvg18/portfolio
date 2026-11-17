@@ -1,4 +1,5 @@
 import { $, $$ } from "../core/dom.js";
+import { prefersReducedMotion } from "../core/motion.js";
 
 export class SectionSwitcher {
   #rail;
@@ -45,6 +46,7 @@ export class SectionSwitcher {
   refresh() {
     this.#placeGlide(this.#current);
     this.#markOverflow();
+    this.#reveal(this.#current, false);
   }
 
   syncPin(containerTop) {
@@ -60,6 +62,14 @@ export class SectionSwitcher {
     item.classList.add("is-current");
     item.setAttribute("aria-current", "true");
     if (!this.#pointing && !this.#nav.contains(document.activeElement)) this.#placeGlide(item);
+    this.#reveal(item, !prefersReducedMotion());
+  }
+
+  #reveal(item, smooth) {
+    const scroller = this.#scroller;
+    if (scroller.scrollWidth <= scroller.clientWidth) return;
+    const left = item.offsetLeft - (scroller.clientWidth - item.offsetWidth) / 2;
+    scroller.scrollTo({ left: Math.max(0, left), behavior: smooth ? "smooth" : "auto" });
   }
 
   #placeGlide(item) {

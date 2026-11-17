@@ -53,6 +53,7 @@
 .canvas {
   position: relative;
   container-type: inline-size;
+  padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
 
   --u: clamp(0.5px, 100vw / 1440, 1.1px);
 }

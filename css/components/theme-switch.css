@@ -9,7 +9,7 @@ main { position: relative; }
   position: absolute;
   z-index: 35;
   top: 0;
-  right: 0;
+  right: env(safe-area-inset-right, 0px);
   bottom: 0;
   width: 0;
   pointer-events: none;

@@ -165,7 +165,9 @@
   position: relative;
   min-width: 0;
   overflow: hidden;
+  isolation: isolate;
   border-radius: inherit;
+  transform: rotateY(0deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -334,7 +336,7 @@
   .certs .sec-title { width: auto; }
   .certs .sec-frame { padding-bottom: 72px; }
   .vh-grid { grid-template-columns: minmax(0, 1fr); width: auto; gap: 28px; }
-  .vh-preview { order: -1; margin-top: 0; }
+  .vh-preview { order: -1; width: min(100%, max(440px, (100svh - 120px) * 1.75)); margin-top: 0; container-type: inline-size; }
   .vh { padding: 8px; }
   .vh-filter { gap: 6px; padding: 0 10px 12px; }
   .vh-chip { height: 34px; padding: 0 13px; font-size: 14px; gap: 6px; }
@@ -344,10 +346,10 @@
   .vh-list button::after { left: 21px; top: 31px; bottom: -15px; }
   .vh-year { padding: 10px 14px 7px; }
   .pass { border-radius: 24px; }
-  .pass-front { padding: clamp(22px, 4vw, 34px); }
+  .pass-front { padding: clamp(20px, 5cqi, 34px); }
   .pass-seal { width: 48px; height: 48px; }
-  .pass-title { font-size: clamp(28px, 5.6vw, 44px); }
-  .pass-title.is-long { font-size: clamp(24px, 4.4vw, 36px); }
+  .pass-title { font-size: clamp(26px, 6.2cqi, 44px); }
+  .pass-title.is-long { font-size: clamp(22px, 4.9cqi, 36px); }
   .pass-img { inset: 16px; width: calc(100% - 32px); height: calc(100% - 32px); }
   .flip-hint { right: 16px; top: -58px; }
 }
